@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+  - name: System details
+    debug: msg=" {{ inventory_hostname }} is running {{ hostvars[inventory_hostname].ansible_distribution }} version {{ hostvars[inventory_hostname].ansible_distribution_version }}"
